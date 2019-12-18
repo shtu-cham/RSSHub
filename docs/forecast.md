@@ -22,15 +22,17 @@ pageClass: routes
 
 </Route>
 
+## 国家应急广播网
+
+### 预警信息
+
+<Route author="muzea" example="/cneb/yjxx" path="/cneb/yjxx"/>
+
+### 国内新闻
+
+<Route author="muzea" example="/cneb/guoneinews" path="/cneb/guoneinews"/>
+
 ## 停电通知
-
-获取未来一天的停电通知
-
-### 国家电网
-
-<Route author="xyqfer moonbegonia" example="/tingdiantz/95598/36401/36101" path="/tingdiantz/95598/:orgNo/:provinceNo/:scope?" :paramsDesc="['所属省供电公司编码', '所属地市供电公司编码', '停电范围关键字']"/>
-
-> 以上参数可从[查询页面](http://www.95598.cn/95598/outageNotice/initOutageNotice)打开控制台抓包获得
 
 ### 南京市
 

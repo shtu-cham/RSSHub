@@ -4,6 +4,18 @@ pageClass: routes
 
 # 音视频
 
+## 60-Second Science - Scientific American
+
+### Transcript
+
+<Route author="emdoe" example="/60s-science/transcript" path="/60s-science/transcript"/>
+
+## 99% Invisible
+
+### Transcript
+
+<Route author="Ji4n1ng" example="/99percentinvisible/transcript" path="/99percentinvisible/transcript"/>
+
 ## AcFun
 
 ### 番剧
@@ -95,7 +107,7 @@ pageClass: routes
 
 **类型参考这里**
 | 电影 | 连续剧 | 动画 | 综艺 | 纪录片 |
-| - | - | - | - | - |
+| ---- | ------ | ---- | ---- | ------ |
 | 6 | 7 | 15 | 20 | 24 |
 
 | 动作片 | 喜剧片 | 爱情片 | 科幻片 | 恐怖片 |
@@ -113,6 +125,12 @@ pageClass: routes
 <Route author="wolfyu1991"  example="/mp4ba/复仇者联盟" path="/mp4ba/:keyword" :paramsDesc="['搜索关键字']" supportBT="1"/>
 
 </Route>
+
+## Nyaa
+
+### 搜索结果
+
+<Route author="Lava-Swimmer" example="/nyaa/search/psycho-pass" path="/nyaa/search/:keyword" :paramsDesc="['搜索关键字']" supportBT="1"/>
 
 ## rs05 人生 05 电影
 
@@ -159,6 +177,12 @@ pageClass: routes
 ### 动漫
 
 <Route author="ranpox" example="/iqiyi/dongman/a_19rrh1sifx" path="/iqiyi/dongman/:id" :paramsDesc="['动漫 id, 可在该动漫主页 URL 中找到(不包括`.html`)']"/>
+
+## 播客 IBC 岩手放送｜ IBC ラジオ　イヤーマイッタマイッタ
+
+### IBC 岩手放送｜ IBC ラジオ　イヤーマイッタマイッタ
+
+<Route author="fengkx" example="/maitta" path="/maitta" supportPodcast="1" />
 
 ## 草榴社区
 
@@ -210,7 +234,7 @@ pageClass: routes
 
 ## 抖音
 
-见 [#抖音](/social-media.html#抖音)
+见 [#抖音](/social-media.html#dou-yin)
 
 ## 高清电台
 
@@ -240,17 +264,35 @@ pageClass: routes
 
 <Route author="HenryQW" example="/maoyan/upcoming" path="/maoyan/upcoming" />
 
+## 奈菲影视
+
+### 分区
+
+<Route author="AngUOI" example="/nfmovies/0" path="/nfmovies/:id?" :paramsDesc="['子版块 id, 为空默认首页']">
+
+| 首页 | 电影 | 电视剧 | 综艺 | 动漫 | 奈菲独家 |
+| ---- | ---- | ------ | ---- | ---- | -------- |
+| 0    | 1    | 2      | 3    | 4    | 5        |
+
+</Route>
+
 ## 柠檬 私房歌 (ningmeng.name)
 
 ### 私房歌
 
 <Route author="dearrrfish" example="/ningmeng/song" path="/ningmeng/song" />
 
+## 片源网
+
+### 最新资源
+
+<Route author="greatcodeeer" example="/pianyuan" path="/pianyuan" radar="1"/>
+
 ## 色花堂中文论坛
 
 ### 原创 BT 电影
 
-<Route author="qiwihui junfengP" example="/dsndsht23" path="/dsndsht23/:subforumid?" supportBT="1" :paramsDesc="['版块 id, 为空默认高清中文字幕']">
+<Route author="qiwihui junfengP" example="/dsndsht23/36/368" path="/dsndsht23/:subforumid?/:type?" supportBT="1" :paramsDesc="['版块 id 或板块名称（见下表）, 为空默认高清中文字幕', '类型 id, 可在分区类型过滤后的 URL 中找到']">
 
 | 每日合集 | 国产原创 | 亚洲无码原创 | 亚洲有码原创 | 高清中文字幕 | 三级写真 | 亚洲名站有码 | VR 系列 | 欧美无码 | 动漫原创 | AI 换脸电影 | 原档收藏 WMV |
 | -------- | -------- | ------------ | ------------ | ------------ | -------- | ------------ | ------- | -------- | -------- | ----------- | ------------ |
@@ -333,6 +375,20 @@ pageClass: routes
 ### 电台节目
 
 <Route author="kt286" example="/radio/2/520767" path="/radio/:channelname/:name" :paramsDesc="['频道ID, 可在对应专辑页面的 URL 中找到','节目ID，可在对应专辑页面的 URL 中找到']" supportPodcast="1"/>
+
+## 字幕库
+
+### 字幕列表
+
+<Route author="sanmmm" example="/zimuku/mv" path="/zimuku/:type?" :paramsDesc="['类型, 默认为`mv`电影']">
+
+类型
+
+| 最新电影 | 最新美剧 |
+| -------- | -------- |
+| mv       | tv       |
+
+</Route>
 
 ## 字幕组（ZiMuZu.tv）
 

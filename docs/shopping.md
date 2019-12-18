@@ -4,11 +4,25 @@ pageClass: routes
 
 # 购物
 
+## Alter 中国
+
+### 新闻
+
+<Route author="luyuhuang" example="/alter-cn/news" path="/alter-cn/news"/>
+
 ## Westore
 
 ### 新品
 
 <Route author="xyqfer" example="/westore/new" path="/westore/new"/>
+
+## 大麦网
+
+### 票务更新
+
+<Route author="hoilc" example="/damai/activity/上海/音乐会/全部/柴可夫斯基" path="/damai/activity/:city/:category/:subcategory/:keyword?" :paramsDesc="['城市, 如果不需要限制, 请填入`全部`', '分类, 如果不需要限制, 请填入`全部`', '子分类, 如果不需要限制, 请填入`全部`', '搜索关键字, 置空为不限制']"/>
+
+城市、分类名、子分类名, 请参见[大麦网搜索页面](https://search.damai.cn/search.htm)
 
 ## 多抓鱼
 
@@ -42,11 +56,32 @@ pageClass: routes
 
 </Route>
 
+## 酒云网
+
+### 最新商品
+
+<Route author="MeXunco" example="/wineyun/home" path="/wineyun/:category" :paramsDesc="['分类名']" >
+| 全部     | 闪购 | 秒发 | 跨境    | 
+| -------- | ------- | --- | ------- | 
+| home | shangou | miaofa | csborder |
+
+</Route>
+
 ## 礼物说
 
 ### 礼物说
 
 <Route author="sanmmm" example="/liwushuo/index" path="/liwushuo/index"/>
+
+## 缺书网
+
+### 促销
+
+<Route author="kt286" example="/queshu/sale" path="/queshu/sale"/>
+
+### 单品活动信息
+
+<Route author="kt286" example="/queshu/book/34626813" path="/queshu/book/:bookid" :paramsDesc="['图书ID，可在链接中获取']"/>
 
 ## 什么值得买
 
@@ -118,22 +153,6 @@ pageClass: routes
 
 </Route>
 
-## 甩甩尾巴
-
-### 分类
-
-<Route author="xyqfer" example="/dgtle/trade/111" path="/dgtle/trade/:typeId?" :paramsDesc="['分类 id，默认为全部']">
-
-| 全部 | 电脑 | 手机 | 平板 | 相机 | 影音 | 外设 | 生活 | 公告 |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| 0    | 111  | 109  | 110  | 113  | 114  | 115  | 112  | 116  |
-
-</Route>
-
-### 关键词
-
-<Route author="gaoliang" example="/dgtle/trade/search/ipad" path="/dgtle/trade/search/:keyword" :paramsDesc="['搜索关键词']"/>
-
 ## 淘宝众筹
 
 ### 众筹项目
@@ -171,6 +190,16 @@ pageClass: routes
 ### 小米有品每日上新
 
 <Route author="xyqfer" example="/mi/youpin/new" path="/mi/youpin/new"/>
+
+## 宜家 IKEA
+
+### 宜家 IKEA（英国）- 商品上新
+
+<RouteEn author="HenryQW" example="/ikea/uk/new" path="/ikea/uk/new"/>
+
+### 宜家 IKEA（英国）- 促销
+
+<RouteEn author="HenryQW" example="/ikea/uk/offer" path="/ikea/uk/offer"/>
 
 ## 有赞
 
